@@ -1,0 +1,177 @@
+body
+  font-family: $font-base
+  font-size: $font-size-base
+  color: $color-text-base
+  height: 100%
+  line-height: 1.1
+a
+  text-decoration: none
+textarea
+  resize: none
+input[placeholder]
+  &:focus::-webkit-input-placeholder
+    color: transparent
+  &:focus::-moz-placeholder
+    color: transparent
+  &:focus:-moz-placeholder
+    color: transparent
+  &:focus:-ms-input-placeholder
+    color: transparent
+
+.main
+  max-width: 1200px
+  margin: 0px auto
+  padding: 0px 20px
+
+.content-block
+  padding: 60px 0px
+
+.main-title
+  font-size: 40px
+  font-family: $sans-narrow
+  color: #fff
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 40px
+  
+.btn
+  padding: 20px 30px
+  border: 3px solid $main-color-theme
+  text-transform: uppercase
+  color: $main-color-theme
+  font-size: 20px
+  background-color: transparent
+  +border-radius(35px)
+  +transition(0.2s linear)
+  &:hover
+    color: #fff
+    background-color: $main-color-theme
+
+//Header
+.header-block
+  margin-top: 40px
+  +flexbox
+  +flex-wrap(wrap)
+.header-block__logo
+  margin-right: 25px
+.header-info__title
+  font-size: 30px
+  text-transform: uppercase
+  margin: 25px 0px 15px
+  color: #3c5058
+.header-phone
+  font-size: 24px
+  color: $color-base
+  &:first-child
+    padding-right: 20px
+    border-right: 2px solid $color-base
+  &:last-child
+    padding-left: 20px
+
+//g-description
+.g-description
+  padding: 50px 0px
+.g-description-wrap
+  +flexbox
+  +flexbox
+  +flex-wrap(wrap)
+.g-description-wrap__item
+  +flex(1 1 300px)
+  img
+    display: block
+    width: 100%
+    height: 100%
+    max-width: 580px
+    margin: 0px auto
+.g-description-item
+  text-align: right
+  margin-top: 70px
+.g-description-item__title
+  font-size: 38px
+  font-style: italic
+  color: $color-base
+  margin-bottom: 30px
+.quote
+  position: relative
+  &::before
+    content: ''
+    display: block
+    width: 38px
+    height: 30px
+    background: url("../images/quote.png") no-repeat
+    position: absolute
+    top: 50%
+    margin-top: -15px
+    left: -60px
+
+//g-advantages
+.g-advantages
+  background-color: $main-color-theme
+  .main
+    max-width: 1000px
+.g-advantages-wrap
+  +flexbox
+  +flex-wrap(wrap)
+.g-advantages-wrap__item
+  max-width: 500px
+  padding: 0px 10px
+  box-sizing: border-box
+  margin: 0px auto 20px
+  +flex(1 1 350px)
+.g-advantages-item
+  position: relative
+  > img
+    width: 100%
+    height: 100%
+    display: block
+.g-advantages-item__layer
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+.g-advantages-item-layer
+  height: 100%
+  padding: 20px
+  box-sizing: border-box
+  background-color: rgba(0,0,0,0.5)
+  +flexbox
+  +flex-direction(column)
+  +justify-content(space-between)
+  &:hover
+    .g-advantages-item-title
+      border-color: transparent
+    .g-advantages-item-description
+      opacity: 1
+.g-advantages-item-title
+  width: 100%
+  max-width: 340px
+  height: 80px
+  box-sizing: border-box
+  border: 2px solid #fff
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+  color: #fff
+  font-family: $sans-narrow
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+  +transition(0.4s linear)
+.g-advantages-item-layer__description
+  text-align: right
+.g-advantages-item-description
+  opacity: 0
+  width: 100%
+  max-width: 340px
+  height: 80px
+  box-sizing: border-box
+  border: 2px solid #fff
+  color: #fff
+  text-align: center
+  font-size: 16px
+  padding: 0px 20px
+  +flexbox-inline
+  +justify-content(center)
+  +align-items(center)
+  +transition(0.5s linear)
